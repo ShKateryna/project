@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    @media only screen and (max-width: 720px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Responsive Page</h1>
+    <p>This is a paragraph in the page.</p>
+    <table border="1">
+      <tr>
+        <td>Table Cell 1</td>
+        <td>Table Cell 2</td>
+      </tr>
+      <tr>
+        <td>Table Cell 3</td>
+        <td>Table Cell 4</td>
+      </tr>
+    </table>
+    <img src="https://via.placeholder.com/720x480" alt="Placeholder Image">
+  </div>
+</body>
+</html>

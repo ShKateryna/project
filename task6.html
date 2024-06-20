@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Components Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+    }
+    input[type="number"] {
+      width: 60px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .order-summary {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Computer Components Order Form</h1>
+    <form id="order-form">
+      <div>
+        <label for="cpu">CPU:</label>
+        <input type="number" id="cpu" name="cpu" min="0">
+      </div>
+      <div>
+        <label for="gpu">GPU:</label>
+        <input type="number" id="gpu" name="gpu" min="0">
+      </div>
+      <div>
+        <label for="ram">RAM:</label>
+        <input type="number" id="ram" name="ram" min="0">
+      </div>
+      <div>
+        <label for="storage">Storage:</label>
+        <input type="number" id="storage" name="storage" min="0">
+      </div>
+      <div>
+        <label for="total">Total Price:</label>
+        <span id="total">0</span> USD
+      </div>
+      <button type="submit">Place Order</button>
+    </form>
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <p>Total CPU: <span id="cpu-summary">0</span></p>
+      <p>Total GPU: <span id="gpu-summary">0</span></p>
+      <p>Total RAM: <span id="ram-summary">0</span></p>
+      <p>Total Storage: <span id="storage-summary">0</span></p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('order-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const cpuQty = parseInt(document.getElementById('cpu').value) || 0;
+      const gpuQty = parseInt(document.getElementById('gpu').value) || 0;
+      const ramQty = parseInt(document.getElementById('ram').value) || 0;
+      const storageQty = parseInt(document.getElementById('storage').value) || 0;
+
+      const cpuPrice = 200;
+      const gpuPrice = 300;
+      const ramPrice = 50;
+      const storagePrice = 100;
+
+      const totalPrice = (cpuQty * cpuPrice) + (gpuQty * gpuPrice) + (ramQty * ramPrice) + (storageQty * storagePrice);
+
+      document.getElementById('total').textContent = totalPrice;
+
+      document.getElementById('cpu-summary').textContent = cpuQty;
+      document.getElementById('gpu-summary').textContent = gpuQty;
+      document.getElementById('ram-summary').textContent = ramQty;
+      document.getElementById('storage-summary').textContent = storageQty;
+    });
+  </script>
+</body>
+</html>

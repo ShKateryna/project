@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form for IU students</title>
+    <style>
+        h1 {
+            margin-top: 10px;
+            text-align: center;
+        }
+         /* #colorButton {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s; 
+         } */
+         .button {
+             padding: 10px 100px;
+             background-color: rgb(141, 106, 206);
+             color: white;
+             border: none;
+             cursor: pointer;
+             transition: background-color 0.3s;
+            font-size: large;
+            }
+            .button:hover {
+                background-color: rgb(171, 158, 195);
+            }
+            .container {
+                display: flex;
+            }
+            .video_container {
+                margin-right: 20px;
+                flex-direction: column;
+            }
+            .image_container {
+               margin-left: 40px;
+                flex-direction: column;
+            }
+
+            /* iframe {
+                float: left;
+               
+                margin-bottom: 20px;
+                flex-direction: column;
+            } */
+        /* Style for the form */
+        form {
+            max-width: 700px;
+            max-height: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: cadetblue;
+            display: block;
+        
+            
+        }
+
+        /* Style for form fields */
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        /* Style for table */
+        table, th, td, tr {
+            border: solid;
+            border-collapse: collapse;
+            text-align: center;
+            column-width: 5cm;
+            margin: 0 auto;
+           
+        }
+
+        /* Style for checkbox */
+
+        /* +video, link from the picture */
+
+        /* Style for submit button */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+        }
+            
+            /* Style for reset button */
+        input[type="reset"] {
+            background-color: #ff6200;
+            color: #fff;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Style for picture and video */
+        img, video {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        footer {
+            margin: 30px;
+            text-align: center;
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            font-size: large;
+        }
+    </style>
+</head>
+<header>
+    <a name="start"></a>
+    <h1>
+        <!-- Form for <button id="colorButton" onclick="changeColor()">IU</button> students -->
+        <button class="button">Form for IU students</button>
+    </h1>
+</header>
+
+<body>
+    <div class="container">
+    <!-- <iframe width="560" height="315"  src="https://www.youtube.com/watch?v=I4kFkAt5h8g" frameborder="0" allowfullscreen ></iframe> -->
+    <div class="video_container">
+    <iframe width="300" height="300" src="https://www.youtube.com/embed/I4kFkAt5h8g" title="Welcome!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
+<br><br>
+    <iframe width="300" height="300" src="https://www.youtube.com/embed/gPrAvjr8xX0" title="IU vs IUBH – What Changed?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<br><br>
+<iframe width="300" height="300" src="https://www.youtube.com/embed/_49apmHFUpo" title="Unlock Your Brain&#39;s Potential with Mind Mapping: The Logical and Creative Solution for Studying" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <br><br>
+
+    <div>
+    <form action="#" method="POST">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required value="Enter your Name">
+        </div>
+        <br>
+        <div>
+            <label for="name">Last Name:</label>
+            <input type="text" id="name" name="name" required value="Enter your Last Name">
+        </div>
+        <br>
+        <div>
+            <label for="age">Age:</label>
+            <input id="age" type="number" name="age_param" value=18>
+        </div>
+        <br>
+        <div>
+            <label fro="gender">Gender:</label>
+            <input id="gender_male" type="radio" name="gender_param" value="male"> <label for="gender_male">Male</label>
+            <input id="gender_female" type="radio" name="gender_param" value="female"> <label for="gender_female">Female</label>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required value="name@gmail.com">
+        </div>
+        <br>
+        <div>
+            <label for="type">Type of degree:</label>
+            <select id="type" name="type_param">
+                 <option value="Bachelor">Bachelor</option> 
+                 <option value="Master">Master</option> 
+                 <option value="MBA">MBA</option>
+                 </select>
+        </div>
+        <br>
+        <div>
+            <table>
+                <tr>
+                    <th>Majors</th>
+                    <th>Modules</th>
+                </tr>
+                <tr>
+                    <td rowspan="3">Business & IT</td>
+                    <td>Math1</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                </tr>
+                <tr>
+                    <td>Programming with Java</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">Busines Administration</td>
+                    <td>Business Math</td>
+                </tr>
+                <tr>
+                    <td>International Marketing</td>
+                </tr>
+                <tr>
+                    <td>Supply Chain Management</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div>
+            <label>Favourite modules:</label>
+        <input id="modules" type="checkbox" name="status_param" checked>
+        <label for="modules">Web Development</label>
+        <input id="modules" type="checkbox" name="status_param">
+        <label for="modules">Business Math</label>
+        <input id="modules" type="checkbox" name="status_param">
+        <label for="modules">Math1</label>
+        </div>
+        <br>
+        <div>
+            <label for="message"> Comment: </label>
+            <textarea id="message" name="message" rows="7" required></textarea>
+        </div>
+        <div>
+            <label for="picture">Upload Picture:</label>
+            <input type="file" id="picture" name="picture">
+            <img id="preview-picture" src="#" alt="Preview" style="display: none; max-width: 200px;">
+        </div>
+        <br>
+        <div>
+            <label for="video">Upload Video:</label>
+            <input type="file" id="video" name="video">
+            <video id="preview-video" controls style="display: none; max-width: 100%;"></video>
+        </div>
+        <p>To the <a href="#start">start of the page</a></p>
+        <input type="submit" value="Submit">
+        <br>
+        <input type="reset" value="Reset">
+
+    </form>
+</div>
+<br><br>
+<div class="image_container">
+    <img src="https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_webp,w_900,c_fill,dpr_auto,g_face,ar_16:9/v1612195010/International/content-pages/berlin-campus_k2nsa8.png" width="300" height="500" alt="Berlin Campus">
+    <br><br>
+    <img src="https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_webp,w_900,c_fill,dpr_auto,g_face,ar_16:9/v1658230632/International/cro/bad_honnef_2.jpg" width="300" height="500" alt="Bad Honnef Campus">
+    <br><br>
+<img src="https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_webp,w_900,c_fill,dpr_auto,g_face,ar_16:9/v1605532481/06%20-%20Standorte/Bad%20Honnef/2011-badhonnef_a27opq.jpg" width="300" height="500" alt="Bad Honnef Campus">
+    <br><br>
+<img src="https://res.cloudinary.com/iubh/image/upload/q_auto:eco/f_webp,w_900,c_fill,dpr_auto,g_face,ar_16:9/v1633429829/22-Upskilling-Business/International%20Partnerships/Bild_Text_Students_c8sqt0.png" width="300" height="500" alt="Campus">
+</div>
+
+</div>
+<footer>
+    <p>
+        <u>To visit the website click IU logo: </u>
+        <br><br>
+        <a href="https://www.iu.org"> <img src="https://www.iu.de/favicon-32x32.png" width="30" alt="Click here"></a> 
+    </p>
+</footer>
+    <script>
+        function changeColor() {
+            var button = document.getElementById("colorButton");
+            var currentColor = button.style.backgroundColor;
+            var newColor = currentColor === "blue" ? "red" : "blue"; // Ternary operator to toggle colors
+            button.style.backgroundColor = newColor;
+}
+        // Preview Picture
+        document.getElementById('picture').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('preview-picture').style.display = 'block';
+                document.getElementById('preview-picture').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Preview Video
+        document.getElementById('video').addEventListener('change', function(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('preview-video').style.display = 'block';
+                document.getElementById('preview-video').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>
+

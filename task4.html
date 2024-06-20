@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Regression</title>
+</head>
+<body>
+    <h1>Linear Regression Example</h1>
+
+    <script>
+        // Function to perform simple linear regression given arrays of x and y values
+        function linearRegression(xValues, yValues) {
+            // Calculate the mean of x and y values
+            var xMean = xValues.reduce((acc, val) => acc + val, 0) / xValues.length;
+            var yMean = yValues.reduce((acc, val) => acc + val, 0) / yValues.length;
+
+            // Calculate the numerator and denominator of the slope (m) formula
+            var numerator = 0;
+            var denominator = 0;
+            for (var i = 0; i < xValues.length; i++) {
+                numerator += (xValues[i] - xMean) * (yValues[i] - yMean);
+                denominator += Math.pow((xValues[i] - xMean), 2);
+            }
+
+            // Calculate the slope (m) and intercept (b)
+            var slope = numerator / denominator;
+            var intercept = yMean - slope * xMean;
+
+            // Return slope and intercept
+            return { slope: slope, intercept: intercept };
+        }
+
+        // Example data points
+        var xValues = [1, 2, 3, 4, 5];
+        var yValues = [2, 3, 4, 5, 6];
+
+        // Perform linear regression
+        var regressionResult = linearRegression(xValues, yValues);
+
+        // Display the result in the console
+        console.log("Linear regression result:");
+        console.log("Slope (m):", regressionResult.slope);
+        console.log("Intercept (b):", regressionResult.intercept);
+    </script>
+</body>
+</html>
