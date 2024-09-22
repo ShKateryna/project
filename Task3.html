@@ -9,14 +9,7 @@
             margin-top: 10px;
             text-align: center;
         }
-         /* #colorButton {
-            padding: 10px 20px;
-            background-color: blue;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s; 
-         } */
+         
          .button {
              padding: 10px 100px;
              background-color: rgb(141, 106, 206);
@@ -41,12 +34,6 @@
                 flex-direction: column;
             }
 
-            /* iframe {
-                float: left;
-               
-                margin-bottom: 20px;
-                flex-direction: column;
-            } */
         /* Style for the form */
         form {
             max-width: 700px;
@@ -79,10 +66,6 @@
             margin: 0 auto;
            
         }
-
-        /* Style for checkbox */
-
-        /* +video, link from the picture */
 
         /* Style for submit button */
         input[type="submit"] {
@@ -129,14 +112,12 @@
 <header>
     <a name="start"></a>
     <h1>
-        <!-- Form for <button id="colorButton" onclick="changeColor()">IU</button> students -->
         <button class="button">Form for IU students</button>
     </h1>
 </header>
 
 <body>
     <div class="container">
-    <!-- <iframe width="560" height="315"  src="https://www.youtube.com/watch?v=I4kFkAt5h8g" frameborder="0" allowfullscreen ></iframe> -->
     <div class="video_container">
     <iframe width="300" height="300" src="https://www.youtube.com/embed/I4kFkAt5h8g" title="Welcome!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
 <br><br>
@@ -267,7 +248,7 @@
         function changeColor() {
             var button = document.getElementById("colorButton");
             var currentColor = button.style.backgroundColor;
-            var newColor = currentColor === "blue" ? "red" : "blue"; // Ternary operator to toggle colors
+            var newColor = currentColor === "blue" ? "red" : "blue"; 
             button.style.backgroundColor = newColor;
 }
         // Preview Picture
