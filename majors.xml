@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <university>
+    <major>
+        <name>Business IT</name>
+        <duration>4 years</duration>
+    </major>
+    <major>
+        <name>Business Administration</name>
+        <duration>3 years</duration>
+    </major>
+    <major>
+        <name>Computer Science</name>
+        <duration>4,5 years</duration>
+    </major>
+</university>`;
